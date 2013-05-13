@@ -22,6 +22,11 @@
                 cnwriter.Write("@echo off" + Environment.NewLine + "SET mgruser=mgr-%USERNAME%" + Environment.NewLine + "runas /savecred /user:rmit\%mgruser% ""C:\Program Files (x86)\Microsoft\ConfigurationManager2007RemoteControl\RC.exe 1 " + hostname + Environment.NewLine + "exit")
                 cnwriter.Close()
                 remoteconnect.Start()
+            ElseIf hostname.Substring(0, 1) = "W" Then
+                hostname = hostname
+                cnwriter.Write("@echo off" + Environment.NewLine + "SET mgruser=mgr-%USERNAME%" + Environment.NewLine + "runas /savecred /user:rmit\%mgruser% ""C:\Program Files (x86)\Microsoft\ConfigurationManager2007RemoteControl\RC.exe 1 " + hostname + Environment.NewLine + "exit")
+                cnwriter.Close()
+                remoteconnect.Start()
             Else
                 hostname = "w" + hostname
                 cnwriter.Write("@echo off" + Environment.NewLine + "SET mgruser=mgr-%USERNAME%" + Environment.NewLine + "runas /savecred /user:rmit\%mgruser% ""C:\Program Files (x86)\Microsoft\ConfigurationManager2007RemoteControl\RC.exe 1 " + hostname + Environment.NewLine + "exit")
