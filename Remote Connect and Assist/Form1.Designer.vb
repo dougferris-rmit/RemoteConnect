@@ -25,6 +25,7 @@ Partial Class RemoteControl
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbHostName = New System.Windows.Forms.TextBox()
         Me.btnRemoteConnect = New System.Windows.Forms.Button()
+        Me.cbKill = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -47,12 +48,24 @@ Partial Class RemoteControl
         'btnRemoteConnect
         '
         Me.btnRemoteConnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemoteConnect.Location = New System.Drawing.Point(89, 100)
+        Me.btnRemoteConnect.Location = New System.Drawing.Point(89, 106)
         Me.btnRemoteConnect.Name = "btnRemoteConnect"
         Me.btnRemoteConnect.Size = New System.Drawing.Size(195, 32)
-        Me.btnRemoteConnect.TabIndex = 2
+        Me.btnRemoteConnect.TabIndex = 3
         Me.btnRemoteConnect.Text = "Connect"
         Me.btnRemoteConnect.UseVisualStyleBackColor = True
+        '
+        'cbKill
+        '
+        Me.cbKill.AutoSize = True
+        Me.cbKill.Checked = True
+        Me.cbKill.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbKill.Location = New System.Drawing.Point(89, 83)
+        Me.cbKill.Name = "cbKill"
+        Me.cbKill.Size = New System.Drawing.Size(198, 17)
+        Me.cbKill.TabIndex = 2
+        Me.cbKill.Text = "Kill running remote connect windows"
+        Me.cbKill.UseVisualStyleBackColor = True
         '
         'RemoteControl
         '
@@ -60,6 +73,7 @@ Partial Class RemoteControl
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(401, 144)
+        Me.Controls.Add(Me.cbKill)
         Me.Controls.Add(Me.btnRemoteConnect)
         Me.Controls.Add(Me.tbHostName)
         Me.Controls.Add(Me.Label1)
@@ -72,5 +86,6 @@ Partial Class RemoteControl
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tbHostName As System.Windows.Forms.TextBox
     Friend WithEvents btnRemoteConnect As System.Windows.Forms.Button
+    Friend WithEvents cbKill As System.Windows.Forms.CheckBox
 
 End Class
